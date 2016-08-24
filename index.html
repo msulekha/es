@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>e-shopper</title>
+    <link rel="stylesheet" href="lib/vendor/cssreset/reset.css"/>
+    <link rel="stylesheet" href="lib/vendor/roboto-fontface/css/roboto/roboto-fontface.css"/>
+    <link rel="stylesheet" href="lib/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="lib/vendor/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./css/site.css"/>
+
+
+    <script src="lib/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="lib/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/vendor/angular/angular.js"></script>
+    <script src="lib/vendor/angular-route/angular-route.min.js"></script>
+
+</head>
+<body>
+<!-- Include the common stuffs
+      like: header, footer
+   and have the ng-view to change the inner contents
+      like: home-page, shop-page etc.
+-->
+<div class="container es-page">
+
+    <!-- header -->
+    <section id="es-header" class="row" data-ng-include="" src="'./partial/header.html'"></section>
+    <!-- ./header -->
+
+    <div data-ng-include="" src="'./partial/sub-header.html'"></div>
+
+    <div class="row" data-ng-view=""></div>
+</div>
+
+<!--
+      list all application modules first
+         1. app main module
+         2. app feature1 module
+         3. app feature2 module
+          ......
+          ......
+-->
+<!-- main module -->
+<script src="./js/app.js"></script>
+<!-- header module -->
+<script src="./js/header/_header.js"></script>
+
+<!-- Home module -->
+<script src="js/Home/_home.js"></script>
+
+<!-- shop module -->
+<script src="./js/Shop/_shop.js"></script>
+
+<!-- cart module -->
+<script src="./js/Cart/_cart.js"></script>
+<!--
+      list all the application startup functions
+          config()
+          run()
+          ....
+-->
+<script src="./js/app-config.js"></script>
+
+<!--
+     list all application other angular
+     components by features modules
+         1. shop feature angular components
+            a. controller
+            b. services
+            c. filters
+            d. directives
+
+         2. checkout feature angular components
+            a. controller
+            b. services
+            c. filters
+            d. directives
+         ......
+         ......
+app controllers -->
+
+<!-- feature: header -->
+<script src="js/header/es.header.headerController.js"></script>
+
+<!-- feature: home -->
+<script src="js/Home/es.home.homeController.js"></script>
+<script src="js/Home/es.home.homeService.js"></script>
+
+<!-- feature: shop -->
+<script src="js/Shop/es.shop.ShopController.js"></script>
+<script src="js/Shop/es.shop.shopService.js"></script>
+
+<!-- feature: cart -->
+<script src="js/Cart/es.cart.CartController.js"></script>
+<script src="js/Cart/es.cart.cartService.js"></script>
+<!-- others -->
+<script src="./js/site.js"></script>
+</body>
+</html>

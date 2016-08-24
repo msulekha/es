@@ -1,0 +1,81 @@
+<div class="es-shop-page">
+    <section id="es-header-img" class="row">
+        <div class="col-md-12">
+            <img src="./images/advertisement.jpg" alt="advt">
+        </div>
+    </section>
+    <section id="es-category-items">
+        <div class="col-md-3">
+            <h4>CATEGORY</h4>
+            <ul class="es-category">
+                <li data-ng-repeat="categoryItem in categoryItems">
+                    <a href="#" data-ng-bind="categoryItem"></a>
+                </li>
+            </ul>
+            <h4>BRANDS</h4>
+            <ul class="es-brands">
+                <li data-ng-repeat="brand in brands">
+                    <a href="#" data-ng-bind="brand"></a>
+                </li>
+            </ul>
+            <h4>PRICE RANGE</h4>
+            <div class="price">
+                <div class="curr-price-range">
+                    {{currentPriceRange}}
+                </div>
+                <input type="range" name="price-min" id="price-range" data-ng-model="currentPriceRange" min="0" max="1000"/>
+                <span class="min-price">$0</span>
+                <span class="max-price">$1000</span>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h4>FEATURES ITEMS</h4>
+
+            <div class="row" data-ng-repeat="product in products" data-ng-if="($index%3 == 0)">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img data-ng-src="./images/{{products[$index].image}}" alt="{{products[$index].imageName}}">
+                        <p class="offer-price">{{products[$index].price}}</p>
+                        <p class="price-remarks">{{products[$index].remarks}}</p>
+                        <div class="add-cart" data-ng-click="addItemToCart(products[$index].id)">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img data-ng-src="./images/{{products[$index+1].image}}" alt="{{products[$index+1].imageName}}">
+                        <p class="offer-price">{{products[$index+1].price}}</p>
+                        <p class="price-remarks">{{products[$index+1].remarks}}</p>
+                        <div class="add-cart" data-ng-click="addItemToCart(products[$index+1].id)">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img data-ng-src="./images/{{products[$index+2].image}}" alt="{{products[$index+2].imageName}}">
+                        <p class="offer-price">{{products[$index+2].price}}</p>
+                        <p class="price-remarks">{{products[$index+2].remarks}}</p>
+                        <div class="add-cart" data-ng-click="addItemToCart(products[$index+2].id)">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!--
+<div class="card-footer">
+    <a href="#" class="btn-footer col-md-6 br-1px">Add To Wishlist</a>
+    <a href="#" class="btn-footer col-md-6">Add To Wishlist</a>
+</div>-->
+

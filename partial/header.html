@@ -1,0 +1,33 @@
+<header class="es-header" data-ng-controller="HeaderController">
+            <span class="es-logo">
+                <img src="images/logo.png" alt="e-shopper"/>
+            </span>
+    <ul id="es-top-header-links" class="es-nav-links">
+        <li>
+            <a href="#">
+                <i class="fa fa-user"></i>Account
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-star"></i>Wishlist
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-crosshairs"></i>Checkout
+            </a>
+        </li>
+        <li data-ng-class="{'es-cart-has-items': hasCartItems}">
+            <a data-ng-click="goToCart()">
+                <i class="fa fa-shopping-cart"></i>Cart
+            </a>
+            <span class="es-cart-count" data-ng-show="hasCartItems" data-ng-bind="cartItemsCountDisplay"></span>
+        </li>
+        <li class="es-pr-0">
+            <a href="#">
+                <i class="fa fa-lock"></i>Login
+            </a>
+        </li>
+    </ul>
+</header>

@@ -1,0 +1,25 @@
+<div class="cart-page">
+
+    <p data-ng-show="cartItems.length == 0">No items in the cart</p>
+
+    <table class="table table-border" data-ng-show="cartItems.length != 0">
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr data-ng-repeat="item in cartItems" >
+            <td>{{item.name}}</td>
+            <td><input type="text" data-ng-model="item.qty"></td>
+            <td>{{item.price | currency}}</td>
+            <td>{{(item.qty * item.price) | currency}}</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="es-cart-total-label">Total</td>
+            <td class="data-total" data-ng-bind="getTotalAmount() | currency"></td>
+        </tr>
+    </table>
+
+
+</div>
