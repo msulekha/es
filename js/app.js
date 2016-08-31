@@ -19,6 +19,7 @@
         'es.header',
         'es.home',
         'es.shop',
-        'es.cart'
+        'es.cart',
+        'es.wish'
     ]);
 })();

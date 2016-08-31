@@ -41,6 +41,10 @@
                             <i class="fa fa-shopping-cart"></i>
                             Add to cart
                         </div>
+                        <div class="card-footer btn-group btn-group-justified">
+                            <a data-ng-click="addItemToWishList(products[$index].id)" class="btn footer-btn btn-default bblr-4">Add To Wishlist</a>
+                            <a href="#" class="btn footer-btn btn-default bbrr-4 br-l-0 br-r-1">Add To Compare</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -52,7 +56,10 @@
                             <i class="fa fa-shopping-cart"></i>
                             Add to cart
                         </div>
-
+                        <div class="card-footer btn-group btn-group-justified">
+                            <a data-ng-click="addItemToWishList(products[$index+1].id)" class="btn footer-btn btn-default bblr-4">Add To Wishlist</a>
+                            <a href="#" class="btn footer-btn btn-default bbrr-4 br-l-0 br-r-1">Add To Compare</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -64,7 +71,10 @@
                             <i class="fa fa-shopping-cart"></i>
                             Add to cart
                         </div>
-
+                        <div class="card-footer btn-group btn-group-justified">
+                            <a data-ng-click="addItemToWishList(products[$index+2].id)" class="btn footer-btn btn-default bblr-4">Add To Wishlist</a>
+                            <a href="#" class="btn footer-btn btn-default bbrr-4 br-l-0 br-r-1">Add To Compare</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,9 +83,4 @@
 </div>
 
 
-<!--
-<div class="card-footer">
-    <a href="#" class="btn-footer col-md-6 br-1px">Add To Wishlist</a>
-    <a href="#" class="btn-footer col-md-6">Add To Wishlist</a>
-</div>-->
 

@@ -1,7 +1,7 @@
 (function(module){
     module.controller("ShopController", ShopController);
 
-    function ShopController($scope, shopService){
+    function ShopController($scope, shopService, wishService){
         /**!
          * list the view model items including the fields & methods and
          * then provide the method implementation details later
@@ -52,6 +52,7 @@
         $scope.brands = shopService.getBrands();
         $scope.products = shopService.getProducts();
         $scope.addItemToCart = addItemToCart;
+        $scope.addItemToWishList = addItemToWishList;
 
 
 
@@ -64,6 +65,11 @@
         
         function addItemToCart(productId) {
             shopService.addItemToCart(productId);
+        }
+
+        function addItemToWishList(productId) {
+            var product = shopService.getProductById(productId);
+            wishService.addItemToWishlist(product);
         }
 
 

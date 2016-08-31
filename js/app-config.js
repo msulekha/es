@@ -18,6 +18,11 @@
                     templateUrl:'./partial/cart.html',
                     controller:'CartController'
                 })
+            .when('/wish',
+                {
+                    templateUrl:'./partial/wish.html',
+                    controller:'WishController'
+                })
             .otherwise({
                 redirectTo:'/home'
             });
