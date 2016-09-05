@@ -38,7 +38,21 @@
          * @private
          */
         function _init() {
-            console.log('HeaderController ==> SCOPE ID :: ' + $scope.$id);
+            //console.log('HeaderController ==> SCOPE ID :: ' + $scope.$id);
+            _displayCartItemsCount();
+        }
+
+
+        function _displayCartItemsCount() {
+            var cartItems = cartService.getCartItems();
+            $scope.hasCartItems = true;
+            $scope.cartItemsCount = cartItems.length;
+            
+            if($scope.cartItemsCount > 10) {
+                $scope.cartItemsCountDisplay = '10+';
+            } else {
+                $scope.cartItemsCountDisplay = new String($scope.cartItemsCount);
+            }
         }
 
         /**!

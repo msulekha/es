@@ -5,6 +5,7 @@
          * angularjs modules like ngRoute, ngResource etc
          **/
         'ngRoute',
+        'ngCookies',
         
         
         /**!

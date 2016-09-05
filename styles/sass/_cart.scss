@@ -1,0 +1,15 @@
+.cart-page {
+  table {
+    tr {
+      td.es-cart-total-label {
+        font-weight: bold;
+        text-align: right;
+        text-transform: uppercase;
+      }
+      td.data-total{
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+}

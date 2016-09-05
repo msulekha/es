@@ -3,7 +3,7 @@
 
     module.factory('cartService', cartService);
 
-    function cartService(){
+    function cartService($cookies){
         var cartItems = [];
         
         function addItemToCart(item) {
@@ -20,6 +20,9 @@
                 item.qty = 1;
                 cartItems.push(item);
             }
+
+            // update the cart items to cookies
+            _updateCartItemsToCookies(cartItems);
         }
         
         function removeItemFromCart(item) {
@@ -27,6 +30,10 @@
         }
         
         function getCartItems() {
+            var cartItemsFromCookies = JSON.parse($cookies.get('es.cart.items'));
+            if (cartItemsFromCookies) {
+                cartItems = cartItemsFromCookies;
+            }
             return cartItems;
             
         }
@@ -46,6 +53,10 @@
                 }
             }
             return itemExists;
+        }
+
+        function _updateCartItemsToCookies(items) {
+            $cookies.put('es.cart.items', JSON.stringify(items));
         }
         
         return {

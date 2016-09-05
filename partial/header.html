@@ -8,10 +8,11 @@
                 <i class="fa fa-user"></i>Account
             </a>
         </li>
-        <li>
+        <li data-ng-class="{'es-wish-has-items': hasWishlistItems}">
             <a data-ng-click="goToWish()">
                 <i class="fa fa-star"></i>Wishlist
             </a>
+            <span class="es-wish-count" data-ng-show="hasWishlistItems" data-ng-bind="wishlistItemsCountDisplay"></span>
         </li>
         <li>
             <a href="#">

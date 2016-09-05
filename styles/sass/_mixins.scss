@@ -1,0 +1,23 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+@mixin box-shadow-top-bottom(
+        $topT, $leftT, $blurT, $colorT, $insetT,
+        $topB, $leftB, $blurB, $colorB, $insetB) {
+
+  @if  $insetT {
+    -webkit-box-shadow:inset $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+    -moz-box-shadow:inset $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+    box-shadow:inset $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+  } @else {
+    -webkit-box-shadow: $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+    -moz-box-shadow: $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+    box-shadow: $topT $leftT $blurT $colorT, $topB $leftB $blurB $colorB;
+  }
+}
+

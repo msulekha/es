@@ -1,0 +1,59 @@
+#es-home-carousel{
+  .carousel-indicators{
+    li {
+      background-color: $carousel-indicator-bg-color;
+      &.active {
+        background-color: $primary-color;
+      }
+    }
+
+  }
+  .carousel-inner {
+    margin: 0 auto;
+    width: 80%;
+    .item{
+      h1 {
+        font-size: $h1-font-size;
+        margin-top: 115px;
+        span.es-c-h1-il {
+          color: $carousel-initial-text-color;
+          text-transform: uppercase;
+        }
+        span.es-c-h1-ll {
+          color: $carousel-text-color;
+          text-transform: uppercase;
+        }
+      }
+      h2 {
+        color: $h2-text-color;
+        font-size: $h2-font-size;
+        margin-top: 10px;
+        margin-bottom: 22px;
+        font-weight: 700;
+      }
+      img.es-price-img {
+        position: relative;
+        top: -190px;
+        left: 120px;
+      }
+      p {
+        color: $p-text-color;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+  .es-carousel-slide-prev-next{
+    .carousel-control {
+      width: 10%;
+      background-color: $main-bg-color;
+      background-image: none;
+      color: #c4c4be;
+      font-size: 35px;
+      > i {
+        position: absolute;
+        top: 50%;
+      }
+    }
+  }
+}

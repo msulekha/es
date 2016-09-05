@@ -5,15 +5,11 @@
     <table class="table table-border" data-ng-show="wishItems.length != 0">
         <tr>
             <th>Name</th>
-            <th>Quantity</th>
             <th>Price</th>
-            <th>Total</th>
         </tr>
         <tr data-ng-repeat="item in wishItems" >
             <td>{{item.name}}</td>
-            <td><input type="text" data-ng-model="item.qty"></td>
             <td>{{item.price | currency}}</td>
-            <td>{{(item.qty * item.price) | currency}}</td>
         </tr>
     </table>
 

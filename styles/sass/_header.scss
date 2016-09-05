@@ -1,0 +1,109 @@
+/* page header with nav links */
+.es-page {
+  .es-header {
+    height: 60px;
+    display: block;
+    margin: 0px;
+    .es-logo {
+      img {
+        border: none;
+        vertical-align: middle;
+        position: relative;
+        top: 10px;
+      }
+    }
+    ul.es-nav-links {
+      float: right;
+      padding: 20px 0px;
+      li {
+        display: inline;
+        padding: 0px 10px;
+        a {
+          color: $link-text-color;
+          font-size: 14px;
+          line-height: 20px;
+          text-decoration: none;
+          > i {
+            padding-right: 3px;
+          }
+          &:hover {
+            color: $primary-color;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          &:hover, &:visited, &:focus {
+            text-decoration: none;
+          }
+        }
+
+
+      }
+      li.es-cart-has-items {
+        a {
+          border: 1px solid $base-border-color;
+          padding: 5px;
+          @include border-radius(100px);
+        }
+        span.es-cart-count {
+          font-size: 12px;
+          color: $primary-color;
+          position: relative;
+          top: -13px;
+          right: 15px;
+          font-weight: bold;
+        }
+      }
+      li.es-wish-has-items a {
+        border: 1px solid $base-border-color;
+        padding: 5px;
+        @include border-radius(100px);
+        span.es-wish-count {
+          font-size: 12px;
+          color: $primary-color;
+          position: relative;
+          top: -13px;
+          right: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .es-nav-head {
+    li {
+      display: inline;
+      padding: 0px 10px;
+      a {
+        color: $link-text-color;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+          color: $primary-color;
+        }
+        &:hover, &:visited, &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #es-sub-header-menu {
+    .es-sub-header {
+      margin-left: -15px;
+      ul.es-nav-head {
+        margin: 0;
+        padding: 6px 0px 7px 0px;
+      }
+    }
+    .es-search-box {
+      right: -10px;
+      position: relative;
+      padding: 0;
+      .form-control:focus {
+        border-color: $primary-color;
+        @include box-shadow-top-bottom(0, 1px, 1px, rgba(0, 0, 0, .075), true, 0, 0, 8px, rgba(254, 152, 15, .6), true);
+      }
+    }
+  }
+}
